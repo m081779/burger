@@ -1,0 +1,41 @@
+
+
+
+<div class="container text-center">
+	<img src="/assets/img/burger.png" alt="" class="">
+	<h1 class="page-header text-center text-shadow">Eat-Da-Burger!</h1>
+	<div class="row">
+		<form class="col-sm-offset-3 col-sm-6">
+			<div class="form-group">
+				<label for="burger" class="text-shadow">Enter a burger you would like to eat, and click submit, or say "Add" and then then the name of your burger:</label>
+				<textarea name="burger" class="form-control" rows="2" id="burger" autofocus></textarea>
+			</div>
+			<input type="submit" value="Submit" id="submit" class="btn btn-primary btn-block" class="form-control">
+		</form>
+	</div>
+	<div class="row">
+		<div class="col-sm-5 well">
+			<h3 class="sectionTitle text-shadow">Burger Queue:</h3>
+			{{#each burgers}}
+				{{#unless devoured}}
+					<div class="burger text-shadow">
+					<p>{{this.id}}. {{burger_name}}<button class="devour pull-right btn btn-success" id="{{this.id}}">Devour it!</button></p>
+
+					</div>
+				{{/unless}}
+			{{/each}}
+		</div>
+
+		<div class="col-sm-offset-2 col-sm-5 well">
+			<h3 class="sectionTitle text-shadow">Devoured Burgers:</h3>
+			{{#each burgers}}
+				{{#if devoured}}
+					<input class="form-control" type="text" value="{{burger_name}}">
+					<br>
+				{{/if}}
+			{{/each}}
+		</div>
+	</div>
+	
+</div>
+
