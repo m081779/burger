@@ -2,9 +2,8 @@
 //function that captures input from textarea, validates it, 
 //and then posts it to the server.
 function createBurger(burger) {
-
 	let input = burger || $('#burger').val().trim();
-	console.log(input);
+	input = input.charAt(0).toUpperCase() + input.slice(1);
 	let clean = /^[a-zA-Z][a-zA-Z0-9 \-']+$/.test(input);
 	$('#burger').val('');
 	if (clean) {
