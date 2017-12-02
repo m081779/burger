@@ -15,7 +15,7 @@ function createBurger(burger) {
 			location.reload();
 		});
 	} else {
-		$('#burger').attr('placeholder', 'Input may not contain special characters')
+		$('#burger').attr('placeholder', 'Input may not be empty or contain special characters')
 	}
 }
 

@@ -3,13 +3,14 @@ body {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	background-attachment: fixed;
+	user-select: none;
 }
 
 .burger {
 	background: orange;
-	height: 40px;
-	margin: 10px;
-	line-height: 40px;
+	height: 45px;
+	margin: 15px;
+	line-height: 36px;
 	font-size: 24px;
 	font-family: 'Nothing You Could Do', cursive;
 	padding-left: 15px;
@@ -51,10 +52,16 @@ img {
 }
 
 #submit	{
+	background: chocolate;
 	margin-bottom: 10px;
 	font-family: 'Bigelow Rules', cursive;
 	font-size: 40px;
 	padding: 0;
+}
+
+.devour {
+	background: chocolate;
+	font-size: 18px;
 }
 
 #label {
@@ -71,3 +78,72 @@ img {
 	font-style: italic;
 }
 
+.bubble {
+	position: relative;
+	height: 80px;
+	background: white;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	border: 2px solid chocolate;
+}
+
+.bubble:after {
+	position: absolute;
+	content: ' ';
+	/*background: black;*/
+	height: 0px;
+	width: 0px;
+	top: 94%;
+	left: 50%;
+	transform: translateX(-50%);
+	border-top: 20px solid white;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid transparent;
+}
+
+.bubble:before {
+	position: absolute;
+	content: ' ';
+	height: 0px;
+	width: 0px;
+	top: 99%;
+	left: 50%;
+	transform: translateX(-50%);
+	border-top: 20px solid chocolate;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid transparent;
+}
+
+#burger {
+	position: absolute;
+	width: 95%;
+	border:none;
+	outline: none;
+	background: transparent;
+	margin: auto;
+	left: 50%;
+	transform: translateX(-50%);
+	resize: none;
+	font-size: 20px;
+	line-height: 40px;
+	overflow: hidden;
+}
+
+
+textarea:focus {
+	outline: none;
+}
+
+textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: brown;
+}
+textarea::-moz-placeholder { /* Firefox 19+ */
+  color: brown;
+}
+
+.devoured {
+	background: orangered;
+	border-color: tan;
+}

@@ -5,12 +5,14 @@
 	<img src="/assets/img/burger.png" alt="" class="">
 	<h1 class="text-center text-shadow" id="title">Eat-Da-Burger!</h1>
 	<div class="row">
+		<h3 id="label" class="text-shadow text-center col-sm-offset-3 col-sm-6">Enter a burger, or say "Add" and then then the name of your burger:</h3>
 		<form class="col-sm-offset-3 col-sm-6">
 			<div class="form-group">
-				<h3 id="label" class="text-shadow text-center">Enter a burger, or say "Add" and then then the name of your burger:</h3>
-				<textarea name="burger" class="form-control" rows="2" id="burger" autofocus></textarea>
+				<div class="bubble">
+					<textarea name="burger" class="" rows="3" id="burger" autofocus></textarea>
+				</div>
+				<input type="submit" value="Submit" id="submit" class="btn btn-danger btn-block" class="form-control">
 			</div>
-			<input type="submit" value="Submit" id="submit" class="btn btn-danger btn-block" class="form-control">
 		</form>
 	</div>
 	<div class="row">
@@ -30,8 +32,9 @@
 			<h3 class="sectionTitle text-shadow text-center">Devoured Burgers:</h3>
 			{{#each burgers}}
 				{{#if devoured}}
-					<input class="form-control" type="text" value="{{burger_name}}">
-					<br>
+					<div class="devoured burger text-shadow text-center">
+						<p>{{burger_name}}</p>
+					</div>
 				{{/if}}
 			{{/each}}
 		</div>
