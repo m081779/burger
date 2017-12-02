@@ -36,7 +36,7 @@ if (annyang) {
 	annyang.start();
 } else {
 	let h4 = $('<h4>');
-	h4.addClass('warning')
+	h4.addClass('warning text-center')
 	  .text('Your browser doesn\'t support speech recognition')
 	  .prependTo('form');
 }
